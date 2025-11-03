@@ -21,7 +21,10 @@ const { title, description = "The American Literacy Institute - Promoting litera
     <header>
       <nav>
         <div class="container">
-          <h1 class="logo">The American Literacy Institute</h1>
+          <div class="logo-container">
+            <img src="/logo.png" alt="American Literacy Institute Logo" class="logo-image" />
+            <h1 class="logo">The American Literacy Institute</h1>
+          </div>
           <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -47,9 +50,10 @@ const { title, description = "The American Literacy Institute - Promoting litera
 
 <style is:global>
   :root {
-    --primary-color: #2c3e50;
+    --primary-color: #354057;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
+    --gold-color: #c9a961;
     --text-color: #333;
     --bg-color: #f8f9fa;
     --white: #ffffff;
@@ -88,10 +92,23 @@ const { title, description = "The American Literacy Institute - Promoting litera
     flex-wrap: wrap;
   }
 
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo-image {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+  }
+
   .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
+    margin: 0;
   }
 
   .nav-links {
@@ -148,6 +165,11 @@ const { title, description = "The American Literacy Institute - Promoting litera
 
     .logo {
       font-size: 1.2rem;
+    }
+
+    .logo-image {
+      height: 40px;
+      width: 40px;
     }
   }
 </style>
