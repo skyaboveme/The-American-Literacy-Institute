@@ -5,45 +5,92 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Home - The American Literacy Institute">
   <section class="hero">
     <div class="container">
-      <h1>Welcome to The American Literacy Institute</h1>
-      <p class="hero-subtitle">Empowering communities through literacy and education</p>
+      <h1>The American Literacy Institute</h1>
+      <p class="hero-subtitle">A World-Class K-5 Education for Students with Dyslexia</p>
+      <p class="hero-description">Launching in Bastrop, Texas - Where every child unlocks their full potential</p>
       <div class="hero-cta">
-        <a href="/programs" class="btn btn-primary">Explore Our Programs</a>
-        <a href="/contact" class="btn btn-secondary">Get Involved</a>
+        <a href="/programs" class="btn btn-primary">Our Educational Model</a>
+        <a href="/investment" class="btn btn-secondary">Investment Opportunity</a>
       </div>
     </div>
   </section>
 
   <section class="mission">
     <div class="container">
-      <h2>Our Mission</h2>
+      <h2>Our Vision</h2>
       <p>
-        The American Literacy Institute is dedicated to promoting literacy and educational excellence
-        across the United States. We believe that reading and writing skills are fundamental to
-        personal growth, community development, and national prosperity.
+        The American Literacy Institute is launching a K-5 private school in Bastrop, Texas, dedicated to
+        providing students with dyslexia a world-class education. Our model is built on evidence-based,
+        multisensory dyslexia instruction, a rigorous academic curriculum, and a character-building,
+        faith-friendly environment.
       </p>
+    </div>
+  </section>
+
+  <section class="problem-solution">
+    <div class="container">
+      <div class="content-box problem">
+        <h2>The Challenge</h2>
+        <p>
+          Dyslexia affects 15-20% of the population. In Texas alone, over 300,000 students are identified
+          with dyslexia, yet the quality and availability of effective intervention vary dramatically across
+          school districts.
+        </p>
+      </div>
+      <div class="content-box solution">
+        <h2>Our Solution</h2>
+        <p>
+          We bridge this gap by offering a proven instructional model that combines Texas-approved dyslexia
+          therapy programs with a comprehensive curriculum. Our approach unlocks the full potential of each
+          student, building confidence and equipping them for a lifetime of learning and leadership.
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="features">
     <div class="container">
-      <h2>What We Do</h2>
+      <h2>Why Choose ALI?</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <h3>📚 Literacy Programs</h3>
-          <p>Comprehensive reading and writing programs for all age groups and skill levels.</p>
+          <h3>📚 Evidence-Based Instruction</h3>
+          <p>Texas-approved dyslexia therapy programs using structured literacy and multisensory methods.</p>
         </div>
         <div class="feature-card">
-          <h3>👥 Community Outreach</h3>
-          <p>Engaging with local communities to identify and address literacy challenges.</p>
+          <h3>👥 Small Class Sizes</h3>
+          <p>60-90 minutes of daily small-group therapy with no more than 6:1 student-to-teacher ratio.</p>
         </div>
         <div class="feature-card">
-          <h3>🎓 Teacher Training</h3>
-          <p>Professional development for educators to enhance literacy instruction methods.</p>
+          <h3>🎓 Certified Specialists</h3>
+          <p>All reading specialists certified in Texas-approved dyslexia therapy programs.</p>
         </div>
         <div class="feature-card">
-          <h3>📖 Resources & Materials</h3>
-          <p>Free educational materials and resources for students, teachers, and families.</p>
+          <h3>❤️ Faith-Friendly Culture</h3>
+          <p>Character education built on traditional values including honesty, integrity, and compassion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="enrollment-info">
+    <div class="container">
+      <h2>Enrollment Information</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <h3>Grades K-5</h3>
+          <p>Initial enrollment of 36 students</p>
+        </div>
+        <div class="info-item">
+          <h3>Location</h3>
+          <p>Bastrop, Texas</p>
+        </div>
+        <div class="info-item">
+          <h3>Annual Tuition</h3>
+          <p>$15,000 per student</p>
+        </div>
+        <div class="info-item">
+          <h3>ESA Eligible</h3>
+          <p>Accepts Education Savings Accounts</p>
         </div>
       </div>
     </div>
@@ -65,6 +112,13 @@ import Layout from '../layouts/Layout.astro';
 
   .hero-subtitle {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
+    font-weight: 600;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
   }
@@ -115,8 +169,44 @@ import Layout from '../layouts/Layout.astro';
   .mission p {
     font-size: 1.2rem;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .problem-solution {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+  }
+
+  .problem-solution .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .content-box {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .content-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .problem h2 {
+    color: var(--accent-color);
+  }
+
+  .solution h2 {
+    color: var(--secondary-color);
+  }
+
+  .content-box p {
+    font-size: 1.1rem;
     line-height: 1.8;
   }
 
@@ -156,6 +246,45 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 1rem;
   }
 
+  .enrollment-info {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: var(--white);
+  }
+
+  .enrollment-info h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .info-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+
+  .info-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .info-item p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
   @media (max-width: 768px) {
     .hero h1 {
       font-size: 2rem;
@@ -165,9 +294,18 @@ import Layout from '../layouts/Layout.astro';
       font-size: 1.2rem;
     }
 
+    .hero-description {
+      font-size: 1rem;
+    }
+
     .mission h2,
-    .features h2 {
+    .features h2,
+    .enrollment-info h2 {
       font-size: 2rem;
+    }
+
+    .content-box h2 {
+      font-size: 1.5rem;
     }
   }
 </style>

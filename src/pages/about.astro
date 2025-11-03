@@ -13,44 +13,103 @@ import Layout from '../layouts/Layout.astro';
   <section class="content">
     <div class="container">
       <div class="content-section">
-        <h2>Our Story</h2>
+        <h2>A Vision for Literacy and Leadership</h2>
         <p>
-          The American Literacy Institute was founded with a simple yet powerful vision:
-          to ensure every American has access to quality literacy education. We recognize
-          that literacy is not just about reading and writing—it's about opening doors to
-          opportunity, empowerment, and lifelong learning.
+          The American Literacy Institute presents a compelling investment opportunity to address a critical
+          and underserved need in the American education landscape. We are poised to launch a K-5 private
+          school in Bastrop, Texas, dedicated to providing students with dyslexia a world-class education.
+          Our model is built on a foundation of evidence-based, multisensory dyslexia instruction, a rigorous
+          academic curriculum, and a character-building, faith-friendly environment.
+        </p>
+        <p>
+          With an initial enrollment of 36 students, ALI is designed to be a scalable and replicable model
+          for excellence in dyslexia education, with a clear path for expansion into a national network of schools.
         </p>
       </div>
 
       <div class="content-section">
-        <h2>Our Values</h2>
-        <ul class="values-list">
-          <li><strong>Accessibility:</strong> Literacy education should be available to everyone, regardless of background or circumstance.</li>
-          <li><strong>Excellence:</strong> We strive for the highest quality in all our programs and resources.</li>
-          <li><strong>Innovation:</strong> We embrace new methods and technologies to enhance literacy instruction.</li>
-          <li><strong>Community:</strong> We build strong partnerships with schools, libraries, and community organizations.</li>
-          <li><strong>Empowerment:</strong> We believe literacy is the foundation for personal and community growth.</li>
-        </ul>
+        <h2>The National Dyslexia Crisis</h2>
+        <p>
+          The prevalence of dyslexia in the United States represents a significant and largely unmet need for
+          specialized educational services. It is the most common learning disability, affecting 15-20% of the
+          population, yet public schools, despite their best efforts, often lack the resources, trained personnel,
+          and instructional time to provide the intensive, individualized support that students with dyslexia require.
+        </p>
+        <p>
+          This creates a significant opportunity for a private school model that is specifically designed to meet
+          the unique needs of this student population.
+        </p>
       </div>
 
       <div class="content-section">
-        <h2>Our Impact</h2>
+        <h2>The Texas Landscape</h2>
+        <p>
+          Texas presents a particularly compelling market for the launch of The American Literacy Institute. The
+          state has a large and growing student population, and a high prevalence of dyslexia. In Texas alone,
+          over 300,000 students are identified with dyslexia. While the Texas Education Agency (TEA) has established
+          a comprehensive Dyslexia Handbook and mandates specific instructional approaches, the implementation of
+          these guidelines is inconsistent across the state's more than 1,200 school districts.
+        </p>
+        <p>
+          This "implementation gap" leaves many families seeking alternatives to the public school system. The
+          Bastrop, Texas area, our chosen location for the flagship campus, is a microcosm of this statewide trend.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>Education Savings Accounts: A Game Changer</h2>
+        <p>
+          The national movement toward Education Savings Accounts (ESAs) is transforming the private education
+          sector. ESAs empower parents with the financial resources to choose the educational environment that
+          best meets their child's needs. Texas is at the forefront of this movement, with a robust ESA program
+          that provides significant funding for students with disabilities.
+        </p>
+        <p>
+          This provides a powerful financial underpinning for our growth and expansion, making our high-quality,
+          specialized education accessible to a broader range of families.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <h3>Evidence-Based Excellence</h3>
+            <p>We utilize only Texas-approved, research-based dyslexia therapy programs aligned with the science of reading.</p>
+          </div>
+          <div class="value-card">
+            <h3>Individualized Attention</h3>
+            <p>Small group instruction with no more than 6:1 student-to-teacher ratio ensures every child receives targeted support.</p>
+          </div>
+          <div class="value-card">
+            <h3>Holistic Development</h3>
+            <p>We nurture the whole child through comprehensive academics, extracurriculars, and character education.</p>
+          </div>
+          <div class="value-card">
+            <h3>Faith-Friendly Culture</h3>
+            <p>Built on traditional values including honesty, integrity, compassion, and respect.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2>Our Impact Goals</h2>
         <div class="stats-grid">
           <div class="stat-card">
-            <h3>10,000+</h3>
-            <p>Students Served Annually</p>
+            <h3>36</h3>
+            <p>Students in Year 1</p>
           </div>
           <div class="stat-card">
-            <h3>500+</h3>
-            <p>Certified Instructors</p>
+            <h3>120</h3>
+            <p>Students by Year 5</p>
           </div>
           <div class="stat-card">
-            <h3>50</h3>
-            <p>States Reached</p>
+            <h3>6:1</h3>
+            <p>Student-Teacher Ratio</p>
           </div>
           <div class="stat-card">
-            <h3>25+</h3>
-            <p>Years of Service</p>
+            <h3>90 min</h3>
+            <p>Daily Dyslexia Therapy</p>
           </div>
         </div>
       </div>
@@ -99,22 +158,35 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.8;
   }
 
-  .values-list {
-    list-style: none;
-    padding: 0;
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
   }
 
-  .values-list li {
-    padding: 1rem;
-    margin-bottom: 1rem;
+  .value-card {
+    padding: 2rem;
     background-color: var(--bg-color);
     border-left: 4px solid var(--secondary-color);
-    border-radius: 5px;
-    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .values-list strong {
+  .value-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .value-card h3 {
     color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .value-card p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .stats-grid {
