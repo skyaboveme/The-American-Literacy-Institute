@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us - The American Literacy Institute" description="Learn about The American Literacy Institute's history, mission, and commitment to promoting literacy across America.">
+  <section class="page-header">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>Learn about our history, mission, and commitment to literacy</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+      <div class="content-section">
+        <h2>Our Story</h2>
+        <p>
+          The American Literacy Institute was founded with a simple yet powerful vision:
+          to ensure every American has access to quality literacy education. We recognize
+          that literacy is not just about reading and writing—it's about opening doors to
+          opportunity, empowerment, and lifelong learning.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>Our Values</h2>
+        <ul class="values-list">
+          <li><strong>Accessibility:</strong> Literacy education should be available to everyone, regardless of background or circumstance.</li>
+          <li><strong>Excellence:</strong> We strive for the highest quality in all our programs and resources.</li>
+          <li><strong>Innovation:</strong> We embrace new methods and technologies to enhance literacy instruction.</li>
+          <li><strong>Community:</strong> We build strong partnerships with schools, libraries, and community organizations.</li>
+          <li><strong>Empowerment:</strong> We believe literacy is the foundation for personal and community growth.</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>10,000+</h3>
+            <p>Students Served Annually</p>
+          </div>
+          <div class="stat-card">
+            <h3>500+</h3>
+            <p>Certified Instructors</p>
+          </div>
+          <div class="stat-card">
+            <h3>50</h3>
+            <p>States Reached</p>
+          </div>
+          <div class="stat-card">
+            <h3>25+</h3>
+            <p>Years of Service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  .content {
+    padding: 4rem 0;
+  }
+
+  .content-section {
+    margin-bottom: 4rem;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .content-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .values-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1.1rem;
+  }
+
+  .values-list strong {
+    color: var(--primary-color);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .stat-card h3 {
+      font-size: 2rem;
+    }
+  }
+</style>

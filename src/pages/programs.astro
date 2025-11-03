@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Programs - The American Literacy Institute" description="Explore our comprehensive literacy programs designed for learners of all ages and backgrounds.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Programs</h1>
+      <p>Comprehensive literacy solutions for learners of all ages</p>
+    </div>
+  </section>
+
+  <section class="programs">
+    <div class="container">
+      <div class="program-card">
+        <div class="program-icon">📚</div>
+        <h2>Adult Literacy Program</h2>
+        <p>
+          Designed for adults who want to improve their reading and writing skills.
+          Our program offers flexible scheduling, personalized instruction, and a
+          supportive learning environment.
+        </p>
+        <ul>
+          <li>Basic literacy skills</li>
+          <li>GED preparation</li>
+          <li>Workplace literacy</li>
+          <li>English as a Second Language (ESL)</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">👶</div>
+        <h2>Early Childhood Literacy</h2>
+        <p>
+          Building a strong foundation for young learners through engaging activities,
+          storytelling, and phonics-based instruction.
+        </p>
+        <ul>
+          <li>Pre-K literacy readiness</li>
+          <li>Phonemic awareness</li>
+          <li>Parent-child reading programs</li>
+          <li>Early intervention services</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">🎒</div>
+        <h2>K-12 Support Programs</h2>
+        <p>
+          Supplemental literacy instruction to help students succeed in school.
+          We work closely with schools and families to provide targeted support.
+        </p>
+        <ul>
+          <li>After-school tutoring</li>
+          <li>Summer reading programs</li>
+          <li>Reading intervention</li>
+          <li>Writing workshops</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">👥</div>
+        <h2>Family Literacy</h2>
+        <p>
+          Programs that bring families together around literacy, strengthening both
+          parent and child reading skills simultaneously.
+        </p>
+        <ul>
+          <li>Parent education workshops</li>
+          <li>Intergenerational learning</li>
+          <li>Home library building</li>
+          <li>Family reading nights</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">🏢</div>
+        <h2>Workplace Literacy</h2>
+        <p>
+          Customized programs for businesses and organizations to enhance employee
+          literacy and communication skills.
+        </p>
+        <ul>
+          <li>Professional communication</li>
+          <li>Technical reading skills</li>
+          <li>Business writing</li>
+          <li>Digital literacy</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">🎓</div>
+        <h2>Professional Development</h2>
+        <p>
+          Training and resources for educators, librarians, and literacy volunteers
+          to enhance their instructional practices.
+        </p>
+        <ul>
+          <li>Teaching methodology workshops</li>
+          <li>Literacy assessment training</li>
+          <li>Curriculum development</li>
+          <li>Volunteer coordinator training</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Contact us to learn more about our programs and how to enroll.</p>
+      <a href="/contact" class="btn">Contact Us</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  .programs {
+    padding: 4rem 0;
+  }
+
+  .program-card {
+    background-color: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .program-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .program-card h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .program-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .program-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .program-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .program-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+
+  .cta {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--white);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .program-card h2 {
+      font-size: 1.5rem;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
