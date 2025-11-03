@@ -49,6 +49,69 @@ This website serves as the online presence for The American Literacy Institute, 
 - **TypeScript**: Type-safe JavaScript
 - **CSS**: Custom styling with modern CSS features
 
+## 🚀 Deployment
+
+This site is configured to deploy to **theamericanliteracyinstitute.com** via GitHub Pages.
+
+### Automatic Deployment Setup
+
+The repository includes a GitHub Actions workflow that automatically builds and deploys the site when changes are pushed to the main branch.
+
+#### Steps to Enable GitHub Pages:
+
+1. **Enable GitHub Pages in Repository Settings:**
+   - Go to your repository on GitHub
+   - Navigate to Settings > Pages
+   - Under "Build and deployment", select "GitHub Actions" as the source
+
+2. **Configure Custom Domain:**
+   - In the same GitHub Pages settings, under "Custom domain", enter: `theamericanliteracyinstitute.com`
+   - Click "Save"
+   - The CNAME file is already included in the `public/` directory
+
+3. **Configure DNS Settings:**
+   - In your domain registrar's DNS settings, add the following records:
+
+   **For root domain (theamericanliteracyinstitute.com):**
+   ```
+   Type: A
+   Name: @
+   Value: 185.199.108.153
+
+   Type: A
+   Name: @
+   Value: 185.199.109.153
+
+   Type: A
+   Name: @
+   Value: 185.199.110.153
+
+   Type: A
+   Name: @
+   Value: 185.199.111.153
+   ```
+
+   **For www subdomain (optional):**
+   ```
+   Type: CNAME
+   Name: www
+   Value: skyaboveme.github.io
+   ```
+
+4. **Enable HTTPS:**
+   - After DNS propagation (may take up to 24 hours), return to GitHub Pages settings
+   - Check the "Enforce HTTPS" option
+
+### Manual Deployment
+
+You can also build and deploy manually:
+
+```bash
+npm install
+npm run build
+# The built files will be in the ./dist/ directory
+```
+
 ## 📖 Learn More
 
 For more information about Astro, check out [the Astro documentation](https://docs.astro.build).
