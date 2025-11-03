@@ -23,7 +23,12 @@ import Layout from '../layouts/Layout.astro';
   <section class="programs">
     <div class="container">
       <div class="program-card pillar-1">
-        <div class="program-icon">📚</div>
+        <div class="icon-container books">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
         <h2>Pillar 1: Evidence-Based, Multisensory Instruction</h2>
         <p>
           At the core of our academic program is a deep and abiding commitment to the principles of Structured
@@ -44,7 +49,13 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="program-card pillar-2">
-        <div class="program-icon">🎯</div>
+        <div class="icon-container target">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
         <h2>Pillar 2: A Holistic Approach to Student Development</h2>
         <p>
           We believe that a truly great education nurtures the whole child. In addition to our intensive literacy
@@ -64,7 +75,11 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="program-card pillar-3">
-        <div class="program-icon">❤️</div>
+        <div class="icon-container heart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
         <h2>Pillar 3: A Culture of Character and Faith</h2>
         <p>
           The American Literacy Institute is a faith-friendly school that welcomes families of all backgrounds.
@@ -145,15 +160,42 @@ import Layout from '../layouts/Layout.astro';
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
   }
 
-  .program-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .icon-container {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-container svg {
+    width: 40px;
+    height: 40px;
+    color: var(--white);
+  }
+
+  .icon-container.books {
+    background: linear-gradient(135deg, #1e5a8e, #2a3959);
+    box-shadow: 0 4px 12px rgba(30, 90, 142, 0.3);
+  }
+
+  .icon-container.target {
+    background: linear-gradient(135deg, #c9a961, #8b7355);
+    box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+  }
+
+  .icon-container.heart {
+    background: linear-gradient(135deg, #8b4513, #6b3410);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
   }
 
   .program-card h2 {
     color: var(--primary-color);
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    font-weight: 700;
   }
 
   .program-card p {

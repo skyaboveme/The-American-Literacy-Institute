@@ -53,19 +53,44 @@ import Layout from '../layouts/Layout.astro';
       <h2>Why Choose ALI?</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <h3>📚 Evidence-Based Instruction</h3>
+          <div class="icon-container books">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <h3>Evidence-Based Instruction</h3>
           <p>Texas-approved dyslexia therapy programs using structured literacy and multisensory methods.</p>
         </div>
         <div class="feature-card">
-          <h3>👥 Small Class Sizes</h3>
+          <div class="icon-container users">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Small Class Sizes</h3>
           <p>60-90 minutes of daily small-group therapy with no more than 6:1 student-to-teacher ratio.</p>
         </div>
         <div class="feature-card">
-          <h3>🎓 Certified Specialists</h3>
+          <div class="icon-container award">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <h3>Certified Specialists</h3>
           <p>All reading specialists certified in Texas-approved dyslexia therapy programs.</p>
         </div>
         <div class="feature-card">
-          <h3>❤️ Faith-Friendly Culture</h3>
+          <div class="icon-container heart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3>Faith-Friendly Culture</h3>
           <p>Character education built on traditional values including honesty, integrity, and compassion.</p>
         </div>
       </div>
@@ -240,10 +265,44 @@ import Layout from '../layouts/Layout.astro';
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
   }
 
+  .icon-container {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  }
+
+  .icon-container svg {
+    width: 32px;
+    height: 32px;
+    color: var(--white);
+  }
+
+  .icon-container.books {
+    background: linear-gradient(135deg, #1e5a8e, #2a3959);
+  }
+
+  .icon-container.users {
+    background: linear-gradient(135deg, #2a3959, #1e5a8e);
+  }
+
+  .icon-container.award {
+    background: linear-gradient(135deg, #c9a961, #8b7355);
+  }
+
+  .icon-container.heart {
+    background: linear-gradient(135deg, #8b4513, #6b3410);
+  }
+
   .feature-card h3 {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+    font-weight: 700;
   }
 
   .enrollment-info {
