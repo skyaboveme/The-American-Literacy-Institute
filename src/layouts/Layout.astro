@@ -42,7 +42,49 @@ const { title, description = "The American Literacy Institute - Promoting litera
 
     <footer>
       <div class="container">
-        <p>&copy; {new Date().getFullYear()} The American Literacy Institute. All rights reserved.</p>
+        <div class="footer-content">
+          <div class="footer-logo-section">
+            <img src="/images/TALI logo.png" alt="American Literacy Institute Logo" class="footer-logo" />
+            <h3>The American Literacy Institute</h3>
+            <p class="footer-tagline">Excellence in Dyslexia Education</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>About</h4>
+              <ul>
+                <li><a href="/about">Our Mission</a></li>
+                <li><a href="/programs">Educational Model</a></li>
+                <li><a href="/investment">Investment Opportunity</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Programs</h4>
+              <ul>
+                <li><a href="/programs">Three Pillars of Excellence</a></li>
+                <li><a href="/programs#dyslexia-therapy">Dyslexia Therapy</a></li>
+                <li><a href="/programs#curriculum">Academic Curriculum</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Connect</h4>
+              <ul>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/contact#enrollment">Enrollment Information</a></li>
+                <li><a href="/contact#visit">Schedule a Visit</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; {new Date().getFullYear()} The American Literacy Institute. All rights reserved.</p>
+            <p class="footer-location">Bastrop, Texas</p>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
@@ -51,12 +93,13 @@ const { title, description = "The American Literacy Institute - Promoting litera
 <style is:global>
   :root {
     --primary-color: #2a3959;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
+    --secondary-color: #1e5a8e;
+    --accent-color: #8b4513;
     --gold-color: #c9a961;
-    --text-color: #333;
-    --bg-color: #f8f9fa;
+    --text-color: #1a1a1a;
+    --bg-color: #f5f7fa;
     --white: #ffffff;
+    --border-color: #e1e8ed;
   }
 
   * {
@@ -66,10 +109,13 @@ const { title, description = "The American Literacy Institute - Promoting litera
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.65;
     color: var(--text-color);
     background-color: var(--bg-color);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .container {
@@ -81,8 +127,12 @@ const { title, description = "The American Literacy Institute - Promoting litera
   header {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid var(--gold-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
   nav .container {
@@ -115,17 +165,23 @@ const { title, description = "The American Literacy Institute - Promoting litera
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
   }
 
   .nav-links a {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
   }
 
   .nav-links a:hover {
-    color: var(--secondary-color);
+    color: var(--gold-color);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   main {
@@ -135,22 +191,127 @@ const { title, description = "The American Literacy Institute - Promoting litera
   footer {
     background-color: var(--primary-color);
     color: var(--white);
-    text-align: center;
-    padding: 2rem 0;
+    padding: 3rem 0 1rem;
     margin-top: 4rem;
+    border-top: 4px solid var(--gold-color);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo-section h3 {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .footer-tagline {
+    color: var(--gold-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-column h4 {
+    color: var(--gold-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-column li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-column a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-column a:hover {
+    color: var(--white);
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .footer-location {
+    font-weight: 500;
   }
 
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 
   p {
     margin-bottom: 1rem;
+    line-height: 1.7;
   }
 
   a {
     color: var(--secondary-color);
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--primary-color);
   }
 
   @media (max-width: 768px) {
@@ -170,6 +331,27 @@ const { title, description = "The American Literacy Institute - Promoting litera
     .logo-image {
       height: 40px;
       width: 40px;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-links {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      height: 60px;
+      width: 60px;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
     }
   }
 </style>
